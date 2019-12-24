@@ -4,8 +4,20 @@
 Old letters, svg, angular  
 Copy of https://dev.azure.com/krsln/Alphabet  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+ 
+[Demo](https://krsln.github.io/NgAlphabet)  
 
-https://krsln.github.io/NgAlphabet  
+# Notes
+#### Install angular-cli-ghpages globally
+`npm install -g angular-cli-ghpages`
+
+#### Build for production
+```
+ng build --prod --base-href="https://<username>.github.io/<repository-name>/"
+```
+
+#### Deploy to GitHub pages
+`angular-cli-ghpages --dir=dist/angular-app`
 
 ## Development server
 
