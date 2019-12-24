@@ -1,0 +1,42 @@
+<div *ngIf="Letters" class="col-12 p-1">
+
+  <div class="card mb-2">
+    <div class="card-body">
+      <ng-container *ngFor="let letter of Letters;">
+        <button type="button" (click)="onClick(letter)"
+                class="btn btn-sm mr-1 mb-1 {{letter.Type==0?'btn-outline-dark':'btn-info'}}">
+          {{letter.Origin}}
+          <span class="badge badge-light mr-1" *ngFor="let svg of letter.Vectors">
+                <app-svg [Svg]="svg"></app-svg>
+              </span>
+        </button>
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="card mb-2">
+    <div class="card-body ">
+      <button type="button" class="btn btn-outline-danger mb-2" (click)="onClear()">Clear</button>
+      <div [ngClass]="{'text-right':IsTextRight}">
+        <span [innerHTML]="Sentence"></span>
+        <div>{{SentenceReadable}}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-2">
+    <div class="card-body ">
+      <div class="btn-group mb-1" role="group">
+        <button type="button" class="btn btn-outline-danger" (click)="onDecipher()">Decipher</button>
+        <a class="btn btn-link" href="https://htmledit.squarefree.com/" target="_blank">To See</a>
+      </div>
+      <span *ngIf="Deciphered">
+        <strong>Original:</strong> {{Deciphered.Original}}
+        <strong>Reverse:</strong> {{Deciphered.Reverse}}
+      </span>
+
+      <textarea class="w-100" rows="6" [innerHTML]="Sentence"></textarea>
+    </div>
+  </div>
+
+</div>
