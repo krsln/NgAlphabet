@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 6234 --open",
-    "Build": "ng build --prod --base-href /NgAlphabet/",
+    "Build": "ng build --prod --base-href=\"https://krsln.github.io/NgAlphabet/\"",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
