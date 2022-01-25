@@ -1,11 +1,7 @@
 # NgAlphabet
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-https://github.com/krsln/NgAlphabet
-https://krsln.github.io/NgAlphabet/Alphabet
-
-https://angular.io/cli/generate  
-https://blog.angular.io/angular-cli-strict-mode-c94ba5965f63
+https://github.com/krsln/NgAlphabet  
+[![Progress](https://img.shields.io/badge/Demo-blue)](https://krsln.github.io/NgAlphabet/Alphabet)
 
 ```shell
 ng new NgAlphabet --style=scss --skip-tests=true --routing=true --strict
