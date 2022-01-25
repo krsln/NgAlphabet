@@ -1,54 +1,41 @@
 # NgAlphabet
-`ng new NgAlphabet --style=scss --routing=true` 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
-Old letters, svg, angular  
-Copy of https://dev.azure.com/krsln/Alphabet  
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+https://github.com/krsln/NgAlphabet
+https://krsln.github.io/NgAlphabet/Alphabet
+
+https://angular.io/cli/generate  
+https://blog.angular.io/angular-cli-strict-mode-c94ba5965f63
+
+```shell
+ng new NgAlphabet --style=scss --skip-tests=true --routing=true --strict
+
+```
+
+###### Step 1: Build & Deploy
+```shell
+# ng build --prod --base-href https://[username].github.io/[repo]/
+# ng build --configuration=production --base-href "https://krsln.github.io/NgAlphabet/"
  
-[Demo](https://krsln.github.io/NgAlphabet)  
-
-# Notes
-#### Install angular-cli-ghpages globally
-`npm install -g angular-cli-ghpages`
-
-#### Build for production
-```
-ng build --prod --base-href="https://<username>.github.io/<repository-name>/"
+  "scripts": {
+    "GitHub-build": "ng build --configuration=production --base-href \"https://krsln.github.io/NgAlphabet/\"",
+    "GitHub-deploy": "npx angular-cli-ghpages --dir=dist/ng-alphabet",
+    "GitHub-deploy-IfUGotError": "ngh --no-silent --dir=dist/ng-alphabet",
+  }
 ```
 
-#### Deploy to GitHub pages
-`angular-cli-ghpages --dir=dist/angular-app`
+###### Step 3: Deploy Commands
 
-## Development server
+```shell
+npm install -g angular-cli-ghpages
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+ngh angular-cli-ghpages --dir=dist/[project-name]
+npx angular-cli-ghpages --dir=dist/[PROJECTNAME]
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Images  
-Aurebesh  
-![Aurebesh](Images/NgAlphabet_Aurebesh.png)  
-Futhark  
-![Futhark](Images/NgAlphabet_Futhark.png)  
-Orkhon  
-![Orkhon](Images/NgAlphabet_Orkhon.png)  
-Yenisei  
-![Yenisei](Images/NgAlphabet_Yenisei.png)  
+angular-cli-ghpages --dir=dist/NgLootBox 
+npx angular-cli-ghpages --dir=dist/NgLootBox
+ngh angular-cli-ghpages --dir=dist/NgLootBox
+ngh --no-silent --dir=dist/NgLootBox
+ 
+```
